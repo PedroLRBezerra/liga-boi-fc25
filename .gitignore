@@ -37,6 +37,7 @@ build/
 .env.*
 *.properties
 application.properties
+env/
 
 
 # Arquivos de configuração sensíveis

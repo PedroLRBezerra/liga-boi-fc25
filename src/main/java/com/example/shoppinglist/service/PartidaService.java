@@ -12,6 +12,8 @@ import java.util.List;
 
 @Service
 public class PartidaService {
+
+
     @Autowired
     private PartidaRepository partidaRepository;
 

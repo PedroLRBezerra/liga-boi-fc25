@@ -13,26 +13,13 @@ import java.util.Objects;
 @Table(name = "time")
 @Entity
 public class Time {
+
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
 
-    public Time() {
-    }
-
-    public Time(Long id, String nome) {
-        this.id = id;
-        this.nome = nome;
-    }
-
-    public Time(Long id) {
-        this.id = id;
-    }
-
-    public Time(String nome) {
-        this.nome = nome;
-    }
 
     public Long getId() {
         return id;

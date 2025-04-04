@@ -9,21 +9,14 @@ import lombok.NoArgsConstructor;
 @Table(name = "jogador")
 @Entity
 public class Jogador {
+
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
     private int pontos;
 
-
-    public Jogador() {
-    }
-
-    public Jogador(Long id, String nome, int pontos) {
-        this.id = id;
-        this.nome = nome;
-        this.pontos = pontos;
-    }
 
 
 

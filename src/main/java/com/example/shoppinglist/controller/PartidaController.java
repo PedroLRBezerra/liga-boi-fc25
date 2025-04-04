@@ -17,15 +17,15 @@ public class PartidaController {
     @Autowired
     private PartidaService partidaService;
 
-
     @Autowired
     private JogadorService jogadorService;
+
+
 
     @GetMapping
     public List<Partida> getAllPartidas() {
         return partidaService.findAll();
     }
-
 
     @PostMapping("/registrar")
     public void registrarPartida(@RequestBody Partida partida) {
