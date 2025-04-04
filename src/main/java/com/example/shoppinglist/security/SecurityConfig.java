@@ -32,18 +32,29 @@ public class SecurityConfig {
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers(HttpMethod.POST, "/auth/login").permitAll()
                         .requestMatchers(HttpMethod.POST, "/auth/register").permitAll()
-                        .requestMatchers("/index.html", "/error", "/css/**", "/js/**", "/images/**", "static/**", "img/**", "login/**").permitAll() // libera recursos estáticos
-                        .anyRequest().authenticated() // tudo o resto precisa estar logado
+                        .requestMatchers(
+                                "/login.html",
+                                "/error",
+                                "/css/**",
+                                "/js/**",
+                                "/images/**",
+                                "/static/**",
+                                "/img/**",
+                                "/login/**",
+                                "/icon/**",
+                                "/login.css" // Aqui estamos permitindo o login.css explicitamente
+                        ).permitAll()
+                        .anyRequest().authenticated() // Qualquer outra requisição precisa estar autenticada
                 )
                 .formLogin(form -> form
-                        .loginPage("/index.html")
-                        .loginProcessingUrl("/auth/login") // a URL que o formulário chama no POST
+                        .loginPage("/login.html")
+                        .loginProcessingUrl("/auth/login")
                         .defaultSuccessUrl("/home.html", true)
                         .permitAll()
                 )
                 .logout(logout -> logout
                         .logoutUrl("/logout")
-                        .logoutSuccessUrl("/index.html?logout")
+                        .logoutSuccessUrl("/login.html?logout")
                         .invalidateHttpSession(true)
                         .deleteCookies("JSESSIONID")
                         .permitAll()
