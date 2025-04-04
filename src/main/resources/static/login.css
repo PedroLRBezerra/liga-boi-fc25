@@ -1,31 +1,33 @@
 body {
-    background-color: #eef2f3;
+    background-color: #F1900E; /* Fundo da página laranja */
     font-family: Arial, sans-serif;
 }
 
-.logo {
-    width: auto; /* Ajusta automaticamente */
-    max-width: 100%; /* Garante que a imagem não ultrapasse o card */
-    height: auto; /* Mantém a proporção da imagem */
-    max-height: 150px; /* Limita a altura */
-    display: block;
-    margin: 0 auto; /* Centraliza a imagem */
-    object-fit: contain; /* Garante que a imagem se encaixe corretamente */
-}
-
-
 .card {
+    background-color: #FFA726; /* Cor de fundo do card */
     border-radius: 10px;
+    padding: 20px; /* Adiciona um espaçamento interno */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Dá um efeito de sombra para destacar o card */
 }
 
+.logo {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 150px;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+/* Estiliza o botão para ficar laranja */
 .btn-primary {
-    background-color: #F1900E;
-    border-color: #F1900E;
+    background-color: #F1900E !important; /* Cor do botão */
+    border-color: #F1900E !important;
+    color: white !important; /* Garante que o texto fique visível */
 }
 
 .btn-primary:hover {
-    background-color: #D17A0C;
-    border-color: #D17A0C;
+    background-color: #D17A0C !important;
+    border-color: #D17A0C !important;
 }
-
-
