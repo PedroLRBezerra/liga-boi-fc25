@@ -16,30 +16,31 @@ import java.util.Set;
 @Configuration
 public class DataInitializer {
 
-    /*@Bean
+    @Bean
     public CommandLineRunner run(UsuarioRepository usuarioRepository, RoleRepository roleRepository) {
         return args -> {
 
             // Criação das roles baseadas no enum
-            Role adminRole = new Role(Perfil.ROLE_ADMIN);
-            Role clienteRole = new Role(Perfil.ROLE_CLIENTE);
+            Role adminRole = new Role(Perfil.ADMIN);
+            Role clienteRole = new Role(Perfil.CLIENTE);
 
             // Salvar as roles no banco (se ainda não existirem)
             roleRepository.save(adminRole);
             roleRepository.save(clienteRole);
 
             // Criação de um usuário admin com perfil de ADMIN
-            Usuario admin = new Usuario("Guilherme", "guelherme.contatos@teste", passwordEncoder().encode("admin123"), Set.of(Perfil.ROLE_ADMIN));
+            Usuario admin = new Usuario("Admin", "admin@ligaboi.com.br", passwordEncoder().encode("admin"), Perfil.ADMIN);
             usuarioRepository.save(admin);
 
             // Criação de um usuário cliente com perfil de CLIENTE
-            Usuario cliente = new Usuario("Emily", "emily.contatos@teste", passwordEncoder().encode("cliente123"), Set.of(Perfil.ROLE_CLIENTE));
+            Usuario cliente = new Usuario("Usuario", "usuario@ligaboi.com.br", passwordEncoder().encode("usuario"), Perfil.CLIENTE);
             usuarioRepository.save(cliente);
+
         };
     }
 
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
-    }*/
+    }
 }

@@ -33,7 +33,7 @@ build/
 .vscode/
 
 # Arquivos sensíveis
-.env
+target/.env
 .env.*
 *.properties
 application.properties
