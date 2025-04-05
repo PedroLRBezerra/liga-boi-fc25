@@ -18,6 +18,4 @@ EXPOSE 8080
 # Comando para iniciar a aplicação
 ENTRYPOINT ["java", "-jar", "app.jar"]
 
-# Copia o .env para dentro da imagem
-# COPY .env .env
 
