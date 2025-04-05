@@ -1,0 +1,32 @@
+body {
+    background-color: #F1900E;
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    background-color: #eef2f3;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 150px;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.btn-primary {
+    background-color: #F1900E; /* Cor do botão */
+    border-color: #F1900E;
+    color: white; /* Garante que o texto fique visível */
+}
+
+.btn-primary:hover {
+    background-color: #D17A0C ;
+    border-color: #D17A0C ;
+}
