@@ -16,7 +16,7 @@ import java.util.Set;
 @Configuration
 public class DataInitializer {
 
-    @Bean
+    /*@Bean
     public CommandLineRunner run(UsuarioRepository usuarioRepository, RoleRepository roleRepository) {
         return args -> {
 
@@ -42,5 +42,5 @@ public class DataInitializer {
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
-    }
+    }*/
 }
