@@ -16,7 +16,7 @@ import java.util.Set;
 @Configuration
 public class DataInitializer {
 
-    @Bean
+    /*@Bean
     public CommandLineRunner run(UsuarioRepository usuarioRepository, RoleRepository roleRepository) {
         return args -> {
 
@@ -37,7 +37,7 @@ public class DataInitializer {
             usuarioRepository.save(cliente);
 
         };
-    }
+    }*/
 
     @Bean
     public PasswordEncoder passwordEncoder() {
